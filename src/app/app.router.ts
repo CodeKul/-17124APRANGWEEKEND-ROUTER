@@ -6,15 +6,16 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { Routes, RouterModule } from '@angular/router';
 
-const secondRoutes : Routes = [
-    {path:'profile', component : ProfileComponent },
-    {path:'shortProfile', component : ShortProfileComponent }
+const secondRoutes: Routes = [
+    { path: 'profile', component: ProfileComponent },
+    { path: 'shortProfile', component: ShortProfileComponent }
 ];
 
 const appRoutes: Routes = [
     { path: '', component: WelcomeComponent },
     { path: 'first', component: FirstComponent },
-    { path: 'second/:id', component: SecondComponent, children: secondRoutes}
+    { path: 'second/:id', component: SecondComponent, children: secondRoutes },
+    { path: '**', redirectTo: '' }
 ];
 
 export const AppRouterModule = RouterModule.forRoot(appRoutes);
