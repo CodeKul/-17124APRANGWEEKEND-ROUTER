@@ -7,12 +7,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,

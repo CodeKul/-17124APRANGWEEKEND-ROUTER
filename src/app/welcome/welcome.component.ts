@@ -14,8 +14,12 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   onBtnClick() {
     this.router.navigate(['first']);
+  }
+
+  onSecondBtnClick() {
+    this.router.navigate(['second','100']);
   }
 }

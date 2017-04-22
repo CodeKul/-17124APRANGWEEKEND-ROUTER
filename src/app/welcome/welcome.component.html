@@ -9,4 +9,10 @@
       <input type="button" (click)="onBtnClick()" value="First" class="btn btn-primary"/>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" (click)="onSecondBtnClick()" value="Second" class="btn btn-primary"/>
+      <a [routerLink]="['second','400']">Second</a>
+    </div>
+  </div>
 </div>
