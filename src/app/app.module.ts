@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SecondComponent } from './second/second.component';
+import { ProfileComponent } from './second/profile.component';
+import { ShortProfileComponent } from './second/short-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     WelcomeComponent,
-    SecondComponent
+    SecondComponent,
+    ProfileComponent,
+    ShortProfileComponent
   ],
   imports: [
     BrowserModule,
