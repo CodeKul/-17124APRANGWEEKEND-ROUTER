@@ -1,3 +1,4 @@
+import { GuardService } from './second/guard.service';
 import { ShortProfileComponent } from './second/short-profile.component';
 import { ProfileComponent } from './second/profile.component';
 import { SecondComponent } from './second/second.component';
@@ -14,7 +15,7 @@ const secondRoutes: Routes = [
 const appRoutes: Routes = [
     { path: '', component: WelcomeComponent },
     { path: 'first', component: FirstComponent },
-    { path: 'second/:id', component: SecondComponent, children: secondRoutes },
+    { path: 'second/:id', component: SecondComponent, children: secondRoutes, canActivate :[GuardService]  },
     { path: '**', redirectTo: '' }
 ];
 

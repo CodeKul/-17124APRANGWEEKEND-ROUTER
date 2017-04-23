@@ -1,3 +1,4 @@
+import { GuardService } from './second/guard.service';
 import { AppRouterModule } from './app.router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,7 +27,7 @@ import { ShortProfileComponent } from './second/short-profile.component';
     HttpModule,
     AppRouterModule
   ],
-  providers: [],
+  providers: [GuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
