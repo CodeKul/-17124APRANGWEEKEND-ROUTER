@@ -1,3 +1,4 @@
+import { CommanService } from './comman.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Rx';
@@ -16,12 +17,16 @@ export class SecondComponent implements OnInit,OnDestroy {
 
   constructor(
     private router : Router,
-    private activeRoute : ActivatedRoute
+    private activeRoute : ActivatedRoute,
+    private comman : CommanService
   ) { }
 
   ngOnInit() {
     //this.idUrl = this.activeRoute.snapshot.params['id'];
-    this.subParam = this.activeRoute.params.subscribe(params => this.idUrl = params['id']);
+    this.subParam = this.activeRoute.params.subscribe(params => {
+      this.idUrl = params['id'];
+      this.comman.setIdProfile(this.idUrl);
+    });
     this.subQueryParam = this.router.routerState.root.queryParams.subscribe(qParams => this.queMyName = qParams['myName']);
   }
   ngOnDestroy() {

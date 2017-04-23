@@ -1,3 +1,4 @@
+import { CommanService } from './second/comman.service';
 import { GuardService } from './second/guard.service';
 import { AppRouterModule } from './app.router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,7 +28,7 @@ import { ShortProfileComponent } from './second/short-profile.component';
     HttpModule,
     AppRouterModule
   ],
-  providers: [GuardService],
+  providers: [GuardService, CommanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

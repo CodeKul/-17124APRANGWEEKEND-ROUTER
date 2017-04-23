@@ -10,7 +10,6 @@ export class GuardService implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-
     console.log(route);
     if (parseInt(route.params['id']) > 10)
       return true;
